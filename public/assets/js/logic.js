@@ -1,3 +1,4 @@
+var counter;
 $(document).ready(function() {
     $("#userProfileForm").on("submit", function(event) {
       event.preventDefault();
@@ -10,7 +11,8 @@ $(document).ready(function() {
 });
 
 function userProfile()
-{
+{   
+    counter = $("#mail").val();
     var userProfile = {
         name: $("#name").val(),
         middleName: $("#mname").val(),
@@ -33,7 +35,7 @@ function userProfile()
 function userSurvey()
 {
     console.log($("#userSurvey"));
-    var userSurvey ={answer3:[]};
+    var userSurvey ={answer3:[], counterItem: counter};
     //single option questions
     $("#userSurvey" + ' input[type="radio"]').each(function() {
         if ($(this).is(":checked")) {

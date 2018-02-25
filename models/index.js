@@ -41,8 +41,11 @@ db.UserProfile = require('../models/alphaHookModel.js')(sequelize, Sequelize);
 db.UserSurvey = require('../models/userSurveyModel.js')(sequelize, Sequelize);  
 
 //Relations
-db.UserSurvey.belongsTo(db.UserProfile);  
-db.UserProfile.hasOne(db.UserSurvey);  
+db.UserSurvey.belongsTo(db.UserProfile, {onDelete: 'cascade'});  
+db.UserProfile.hasMany(db.UserSurvey);  
 
+// Here we can connect countries and cities base on country code
+// Country.hasMany(City, {foreignKey: 'countryCode', sourceKey: 'isoCode'});
+// City.belongsTo(Country, {foreignKey: 'countryCode', targetKey: 'isoCode'});
 
 module.exports = db;

@@ -52,7 +52,7 @@ router.post("/survey/create", function(req, res) {
     console.log("Profile being created");
     console.log(req.body);
     db.UserSurvey.create({
-        UserProfileId: 1,
+        UserProfileEmail: req.body.counterItem,
         answer1: req.body.answer1,
         answer2: req.body.answer2,
         answer3a: req.body["answer3[]"][0],

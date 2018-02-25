@@ -3,7 +3,10 @@ module.exports = function(sequelize, DataTypes){
         name: DataTypes.STRING,
         middleName: DataTypes.STRING,
         lastName: DataTypes.STRING,
-        email: DataTypes.STRING,
+        email: {
+            type: DataTypes.STRING,
+            primaryKey: true
+          },
         dob:DataTypes.DATE
     });
   //  UserProfile.hasMany(UserSurvey, { foreignKey: 'id' }); // Set one to many relationship
