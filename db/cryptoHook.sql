@@ -1,0 +1,2 @@
+CREATE DATABASE cryptoHookDB_development;
+USE cryptoHookDB_development;

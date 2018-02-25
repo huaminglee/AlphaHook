@@ -1,12 +1,42 @@
 {
-  "name": "Your_First_Decentralized_Application",
+  "name": "alphahook",
   "version": "1.0.0",
-  "description": "Your first decentralized application",
-  "author": "",
-  "repository": "git@github.com:llSourcell/Your_First_Decentralized_Application.git",
-  "devDependencies": {
-    "ethereumjs-testrpc": "^4.1.3",
-    "solc": "^0.4.17",
-    "web3": "^0.20.1"
+  "description": "Dating site designed to enforce the user's honesty by putting a block chain contract on the line, if you lie, you break the contract and lose your deposit.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buddyeorl/AlphaHook.git"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "express",
+    "dating",
+    "site",
+    "block",
+    "chain",
+    "smartcontract",
+    "ethereum",
+    "solidity"
+  ],
+  "author": "Alexander Lizarraga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buddyeorl/AlphaHook/issues"
+  },
+  "homepage": "https://github.com/buddyeorl/AlphaHook#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.5.2",
+    "sequelize": "^4.33.4"
+  },
+  "engines": {
+    "node": "8.9.3"
   }
 }
