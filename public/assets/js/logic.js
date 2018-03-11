@@ -13,7 +13,7 @@ $(document).ready(function() {
         counter = $("#username").val();
         localStorage.setItem("email", counter);
     });
-    $(".signin").on("click", function(event) {
+    $(".login").on("click", function(event) {
         counter = $("#username").val();
         localStorage.setItem("email", counter);
     });
