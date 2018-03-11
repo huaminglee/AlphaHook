@@ -15,7 +15,8 @@ module.exports = function(sequelize, DataTypes){
         answer6: DataTypes.INTEGER,
         answer7: DataTypes.INTEGER,
         answer8: DataTypes.INTEGER,
-        answer9: DataTypes.INTEGER
+        answer9: DataTypes.INTEGER,
+        answer10: DataTypes.INTEGER
     });
     return UserSurvey;
 }

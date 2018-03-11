@@ -10,7 +10,7 @@ var basename  = path.basename(module.filename);
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
-
+const Op = Sequelize.Op;
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
@@ -34,18 +34,21 @@ Object.keys(db).forEach(function(modelName) {
 });
 
 db.sequelize = sequelize;
-db.Sequelize = Sequelize;
 
 //Models/tables
+db.Users = require('../models/users.js')(sequelize, Sequelize);  
 db.UserProfile = require('../models/alphaHookModel.js')(sequelize, Sequelize);  
 db.UserSurvey = require('../models/userSurveyModel.js')(sequelize, Sequelize);  
+db.UserGoals = require('../models/userGoals.js')(sequelize, Sequelize);  
 
 //Relations
+db.UserProfile.belongsTo(db.Users, {onDelete: 'cascade'});  
+db.Users.hasMany(db.UserProfile); 
+
 db.UserSurvey.belongsTo(db.UserProfile, {onDelete: 'cascade'});  
 db.UserProfile.hasMany(db.UserSurvey);  
 
-// Here we can connect countries and cities base on country code
-// Country.hasMany(City, {foreignKey: 'countryCode', sourceKey: 'isoCode'});
-// City.belongsTo(Country, {foreignKey: 'countryCode', targetKey: 'isoCode'});
+db.UserGoals.belongsTo(db.UserProfile, {onDelete: 'cascade'}); 
+db.UserProfile.hasMany(db.UserGoals);
 
 module.exports = db;

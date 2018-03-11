@@ -1,0 +1,20 @@
+<div class="row">
+    {{#each match}}
+        <div class="searchedMatch">
+            <div class="matchPicture" style="background-image: url{{this.picture}})">Picture</div>
+            <div class="matchDescription">
+                <h6>Description</h6>
+                <p>{{this.email}}</p>
+                <p>{{this.name}}</p>
+            </div>
+            {{#each ../goal}}
+            {{#is this.UserProfileEmail ../this.email}}
+            <div class="matchGoal">
+                <button class="goalButton" value={{this.answer10}}><h4><b>{{this.answer10}}k for me?</b></h4></button>
+            </div>
+            {{/is}}
+            {{/each}}
+        </div>
+    {{/each}}
+</div>
+

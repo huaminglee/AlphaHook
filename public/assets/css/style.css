@@ -1,22 +1,33 @@
+html {
+    background-image: url("../img/maxresdefault.jpg");
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/maxresdefault.jpg");
+  background-repeat: no-repeat, repeat;
+  background-attachment: fixed;
+
 }
 .headerh1 {
     margin: 0;
     padding: 0;
-    height: 20vh;
+    height: 10vh;
     width: 100%;
     opacity: 25%;
     text-align: center;
     vertical-align: bottom;
-    background-color: rgba(247, 145, 120, 0.13);
+    background-color: rgba(255, 255, 255, 0.589);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 6vw;
     font-size: 5vw;
     font-family: fantasy;
-    color: rgba(60, 9, 70, 1);
+    color: rgba(19, 160, 49, 0.493);
+    display: inline-block;
+
 }
 
 .headerh1 {
@@ -151,3 +162,155 @@ form {
     width: 20vw;
     text-align: left;
   }
+  .searchedMatch {
+    width: 60vw;
+    height: 25vh;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+
+  .matchPicture {
+    width: 10vw;
+    height: 23vh;  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    position: relative;
+    float: left;
+  }
+
+  .matchDescription {
+    width: 30vw;
+    height: 23vh;  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    position: relative;
+    float: left;
+  }
+
+  .matchGoal {
+    width: 20vw;
+    height: 23vh;  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    position: relative;
+    float: left;
+  }
+
+  .goalButton {
+    width:95%;
+    height: 95%;
+    padding-left:0px;
+    margin-left:0px;
+    background-color: rgba(228, 18, 46, 0.52);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5%;
+  }
+
+  .loginButton {
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(18, 133, 228, 0.52);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 0vw;
+    margin-right: 12vw;
+    float: right;
+    
+  }
+
+  .searchButton {
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(228, 84, 18, 0.52);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 0vw;
+    margin-right: 1vw;
+    float: right;
+  }
+
+  .profileButton {
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(18, 228, 182, 0.589);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 0vw;
+    margin-right: 1vw;
+    float: right;
+  }
+  .action {
+    width: 20vw;
+    height: 23vh;  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    position: relative;
+    float: left;
+  }
+
+  .finishButton {
+    width:45%;
+    height: 55%;
+    padding-left:0px;
+    margin-left:0px;
+    background-color: rgba(0, 255, 76, 0.52);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5%;
+  }
+
+  .cancelButton {
+    width:45%;
+    height: 55%;
+    padding-left:0px;
+    margin-left:0px;
+    background-color: rgba(255, 0, 34, 0.589);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5%;
+  }
+
+  .login {
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(18, 228, 36, 0.589);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 40vw;
+    margin-right: 1vw;
+  } 
+
+  .signup {
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(18, 228, 36, 0.589);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 40vw;
+    margin-right: 1vw;
+  } 
+
+  .finishedSurvey {
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(18, 228, 36, 0.589);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 40vw;
+    margin-right: 1vw;
+  } 
+
+  .profileButtonSignUp {
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(18, 228, 36, 0.589);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 40vw;
+    margin-right: 1vw;
+  } 

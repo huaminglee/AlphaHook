@@ -1,0 +1,26 @@
+<div class="row">
+    {{#each runningFor}}
+    {{this.finishedGoal}}
+    {{#is this.finishedGoal 1}}
+        <div class="searchedMatch">
+            <div class="matchDescription">
+                <p>You Ran {{this.goal}}k for {{this.runningFor}}</p>
+                <p>Goal was finsihed on {{this.updatedAt}}</p>
+            </div>
+        </div>
+    {{/is}}
+    {{#is this.finishedGoal 0}}
+        <div class="searchedMatch">
+            <div class="matchDescription">
+                <h6>Running For</h6>
+                <p>Running {{this.goal}}k for {{this.runningFor}}</p>
+                <p>Goal started on {{this.createdAt}}</p>
+            </div>
+            <div class="action">
+                <button class="finishButton" value={{this.runningFor}}><h4><b>Done Running?</b></h4></button>
+                <button class="cancelButton" value={{this.runningFor}}><h4><b>Cancel?</b></h4></button>
+            </div>
+        </div>
+    {{/is}}
+    {{/each}}
+</div>
