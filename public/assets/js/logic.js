@@ -124,9 +124,9 @@ function getHooked(matchTarget, goalTarget)
       method: "POST",
       url: "/getHooked",
       data: getHookedNow,
-      success: function(){
-        window.location = url;
-        }
+    //   success: function(){
+    //     window.location = url;
+    //     }
     })
 }
 
