@@ -102,11 +102,10 @@ function userSurvey()
     $.ajax({
       method: "POST",
       url: "/survey/create",
-      data: userSurvey
-    })
-    .then(function(data) {
-      //console.log(data);
-    $('html').html(data);
+      data: userSurvey,
+      success: function(){
+        window.location = url;
+        }
     });
 }
 

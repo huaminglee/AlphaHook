@@ -123,7 +123,7 @@ router.post("/survey/create", function(req, res) {
     .then(function(dbUserSurvey) {
         // log the result to our terminal/bash window
         console.log(dbUserSurvey);
-        return res.render("index");  
+        return res.render("");  
     });
 });
 
