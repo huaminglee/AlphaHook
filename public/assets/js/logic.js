@@ -13,10 +13,14 @@ $(document).ready(function() {
     $(".signup").on("click", function(event) {
         counter = $("#username").val();
         localStorage.setItem("email", counter);
+        url = "/myProfile/" + localStorage.getItem("email");
+        url1 = "/allprofiles/" + localStorage.getItem("email");
     });
     $(".login").on("click", function(event) {
         counter = $("#username").val();
         localStorage.setItem("email", counter);
+        url = "/myProfile/" + localStorage.getItem("email");
+        url1 = "/allprofiles/" + localStorage.getItem("email");
     });
     $(".goalButton").on("click", function(event) {
         event.preventDefault();
@@ -119,11 +123,11 @@ function getHooked(matchTarget, goalTarget)
         async: true,
       method: "POST",
       url: "/getHooked",
-      data: getHookedNow
+      data: getHookedNow,
+      success: function(){
+        window.location = url;
+        }
     })
-    .then(function(data) {
-    //$('html').html(data);
-    });
 }
 
 
