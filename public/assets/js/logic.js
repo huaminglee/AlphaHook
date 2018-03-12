@@ -1,3 +1,4 @@
+console.log("new");
 var counter;
 var url = "/myProfile/" + localStorage.getItem("email");
 var url1 = "/allprofiles/" + localStorage.getItem("email");
