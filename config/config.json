@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "w3o6a0tvx5a3gtaj",
-    "password": "h680qfn1afgndsyc",
+    "username": "tjwppxqi3cjmuylj",
+    "password": "ksbrot3zqgtyna3v",
     "database": "cryptoHookDB_production",
-    "host": "y06qcehxdtkegbeb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "host": "ko86t9azcob3a2f9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
