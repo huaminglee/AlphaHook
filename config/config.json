@@ -14,10 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "tjwppxqi3cjmuylj",
-    "password": "ksbrot3zqgtyna3v",
-    "database": "cryptoHookDB_production",
-    "host": "ko86t9azcob3a2f9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
