@@ -2,6 +2,7 @@ html {
     background-image: url("../img/maxresdefault.jpg");
     background-repeat: no-repeat, repeat;
     background-attachment: fixed;
+    overflow: initial;
 }
 
 body {
@@ -10,7 +11,6 @@ body {
   background-image: url("../img/maxresdefault.jpg");
   background-repeat: no-repeat, repeat;
   background-attachment: fixed;
-
 }
 .headerh1 {
     margin: 0;
@@ -20,7 +20,7 @@ body {
     opacity: 25%;
     text-align: center;
     vertical-align: bottom;
-    background-color: rgba(255, 255, 255, 0.589);
+    background-color: rgba(255, 255, 255, 0.123);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 6vw;
     font-size: 5vw;
@@ -44,60 +44,11 @@ h5 {
 li { 
     list-style:none 
 }
-.toBeDevoured {
-    padding-left: 25vw;
-    width: 30vw;
-    height: 27vw;
-    float: left;
-    font-family: fantasy;
-    color: white;
-    font-size: 1.2vw;
-    font-weight: bolder;
-    background-color: rgba(226, 226, 205, 0.162);
-    overflow: scroll;
-}
-.toBeReturned {
-    padding-right: 15vw;
-    width: 30vw;
-    height: 27vw;
-    float: left;
-    font-family: fantasy;
-    color: white;
-    font-size: 1.2vw;
-    font-weight: bolder;
-    background-color: rgba(226, 226, 205, 0.162);
-    overflow: scroll;
-}
 
 .theSubmit {
     display: inline-block;
     width:100%;
     text-align: center;
-}
-
-#toEat {
-    width:10vw;
-    height:2vw;
-    border-radius: 5%;
-    vertical-align: middle;
-    background-color: rgba(29, 169, 179, 0.575);
-    text-align: center;
-    font-size: 0.8vw;
-    border:none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-#toReturn {
-    width:10vw;
-    height:2vw;
-    border-radius: 5%;
-    vertical-align: middle;
-    background-color: rgba(179, 29, 29, 0.575);
-    text-align: center;
-    font-size: 0.8vw;
-    border:none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 form {
@@ -167,26 +118,39 @@ form {
     height: 25vh;
     text-align: left;
     padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 0%;
     margin-top: 2vh;
     margin-bottom: 2vh;
     margin-left: 10vw;
-    margin-right: 10vw;
+    margin-right: 0vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
-
+  }
+  .runningForMe {
+    width: 30vw;
+    height: 25vh;
+    text-align: left;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-top: -18vh;
+    margin-bottom: 2vh;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .matchPicture {
-    width: 10vw;
+    width: 20%;
     height: 23vh;  
+
     margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin-bottom: 1vh;    
     position: relative;
+    left: -2vw;
     float: left;
   }
 
   .matchDescription {
-    width: 30vw;
+    width: 20vw;
     height: 23vh;  
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -195,8 +159,8 @@ form {
   }
 
   .matchGoal {
-    width: 20vw;
-    height: 23vh;  
+    width: 15vw;
+    height: 15vh;  
     margin-top: 1vh;
     margin-bottom: 1vh;
     position: relative;
@@ -207,10 +171,14 @@ form {
     width:95%;
     height: 95%;
     padding-left:0px;
-    margin-left:0px;
+    margin-left:30%;    
+    margin-top:25%;
     background-color: rgba(228, 18, 46, 0.52);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5%;
+    border: rgba(255, 255, 255, 0.123);
+    border-width: 2px;
+
   }
 
   .loginButton {
@@ -222,6 +190,8 @@ form {
     margin-left: 0vw;
     margin-right: 12vw;
     float: right;
+    border: rgba(255, 255, 255, 0.123);
+    border-width: 2px;
     
   }
 
@@ -234,6 +204,8 @@ form {
     margin-left: 0vw;
     margin-right: 1vw;
     float: right;
+    border: rgba(255, 255, 255, 0.123);
+    border-width: 2px;
   }
 
   .profileButton {
@@ -245,6 +217,8 @@ form {
     margin-left: 0vw;
     margin-right: 1vw;
     float: right;
+    border: rgba(255, 255, 255, 0.123);
+    border-width: 2px;
   }
   .action {
     width: 20vw;
@@ -263,6 +237,8 @@ form {
     background-color: rgba(0, 255, 76, 0.52);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5%;
+    border: rgba(255, 255, 255, 0.123);
+    border-width: 2px;
   }
 
   .cancelButton {
@@ -273,6 +249,8 @@ form {
     background-color: rgba(255, 0, 34, 0.589);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5%;
+    border: rgba(255, 255, 255, 0.123);
+    border-width: 2px;
   }
 
   .login {
@@ -283,6 +261,8 @@ form {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
     margin-left: 40vw;
     margin-right: 1vw;
+    border: rgba(255, 255, 255, 0.123);
+    border-width: 2px;
   } 
 
   .signup {
@@ -293,6 +273,8 @@ form {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
     margin-left: 40vw;
     margin-right: 1vw;
+    border: rgba(255, 255, 255, 0.123);
+    border-width: 2px;
   } 
 
   .finishedSurvey {

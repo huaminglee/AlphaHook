@@ -1,5 +1,6 @@
 var counter;
 var url = "/myProfile/" + localStorage.getItem("email");
+var url1 = "/allprofiles/" + localStorage.getItem("email");
 $(document).ready(function() {
     $("#userProfileForm").on("submit", function(event) {
         event.preventDefault();
@@ -29,7 +30,7 @@ $(document).ready(function() {
         window.location = "/login";
     });
     $('.searchButton').click(function() {
-        window.location = "/allProfiles";
+        window.location = url1;
     });
     $('.profileButton').click(function() {
         window.location = url;
@@ -56,9 +57,9 @@ function userProfile()
     }
     console.log(userProfile);
     $.ajax({
-      method: "POST",
-      url: "/profile/create",
-      data: userProfile
+        method: "POST",
+        url: "/profile/create",
+        data: userProfile
     })
     .then(function(data) {
       //console.log(data);

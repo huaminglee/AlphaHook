@@ -1,6 +1,10 @@
-<div class="row">
+<h1>My Profile</h1>
+
+<div>
+{{!-- Showing who am i running for --}}
+    <h1>Running For</h1>
     {{#each runningFor}}
-    {{this.finishedGoal}}
+    {{#is ../myUser.emailMainUser this.UserProfileEmail}}
     {{#is this.finishedGoal 1}}
         <div class="searchedMatch">
             <div class="matchDescription">
@@ -21,6 +25,32 @@
                 <button class="cancelButton" value={{this.runningFor}}><h4><b>Cancel?</b></h4></button>
             </div>
         </div>
+    {{/is}}
+    {{/is}}
+    {{/each}}
+{{!-- Showing the users running for me --}}
+    <h1>Running for me</h1>
+    {{#each runningFor}}
+    {{#is this.runningFor ../myUser.emailMainUser}}
+    {{#is this.finishedGoal 1}}
+        <div class="searchedMatch">
+            <div class="matchDescription">
+                <p>{{this.UserProfileEmail}} Ran {{this.goal}}k for You</p>
+                <p>Goal was finsihed on {{this.updatedAt}}</p>
+            </div>
+        </div>
+    {{/is}}
+    {{#is this.finishedGoal 0}}
+        <div class="searchedMatch">
+            <div class="matchDescription">
+                <h6>Hey guess what??</h6>
+                <p>{{this.UserProfileEmail}} is Running {{this.goal}}k for You!</p>
+                <p>Goal started on {{this.createdAt}}</p>
+            </div>
+            <div class="action">
+            </div>
+        </div>
+    {{/is}}
     {{/is}}
     {{/each}}
 </div>

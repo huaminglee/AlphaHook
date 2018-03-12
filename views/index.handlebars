@@ -1,7 +1,10 @@
-<div class="row">
+<div>
+    <h1>Search for Matches</h1>
+    {{!-- {{#isnt this.UserUsername ../myUser.emailMainUser}} will prevent main user to be display in search query --}}
     {{#each match}}
+    {{#isnt this.UserUsername ../myUser.emailMainUser}} 
         <div class="searchedMatch">
-            <div class="matchPicture" style="background-image: url{{this.picture}})">Picture</div>
+            <div class="matchPicture" style="background-image: url(http://1.bp.blogspot.com/-hNC-oT6f-fY/TeXxO26yjvI/AAAAAAAAAOY/qfkOqdKkBi8/s1600/platon-photographer-putin-man-of-the-year-portrait.jpg);background-position: center center; background-size: contain; background-repeat:no-repeat;"></div>
             <div class="matchDescription">
                 <h6>Description</h6>
                 <p>{{this.email}}</p>
@@ -10,11 +13,12 @@
             {{#each ../goal}}
             {{#is this.UserProfileEmail ../this.email}}
             <div class="matchGoal">
-                <button class="goalButton" value={{this.answer10}}><h4><b>{{this.answer10}}k for me?</b></h4></button>
+                <button class="goalButton" value={{this.answer10}}><h1><b>{{this.answer10}}k for me?</b></h1></button>
             </div>
             {{/is}}
             {{/each}}
         </div>
+    {{/isnt}}
     {{/each}}
 </div>
 

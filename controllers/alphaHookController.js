@@ -128,8 +128,10 @@ router.post("/survey/create", function(req, res) {
 });
 
 // get route, edited to match sequelize
-router.get("/allProfiles", function(req, res) {
+router.get("/allProfiles/:key", function(req, res) {
     console.log("reading all");
+    console.log(req.params.key)
+    var emailUser=req.params.key;
     db.UserProfile.findAll({})
     .then(function(dbAll) {
     var allData=[];
@@ -154,6 +156,7 @@ router.get("/allProfiles", function(req, res) {
         allSurvey[i]=dbSurvey[i].dataValues;
         }    
         hbsObject.goal = allSurvey;
+        hbsObject.myUser = {'emailMainUser':emailUser};
         console.log(hbsObject.goal);
         return res.render("index", hbsObject);
     });
@@ -216,12 +219,7 @@ function checkForGoals(){
 router.get("/myProfile/:key", function(req, res) {
     console.log(req.params.key)
     var emailUser=req.params.key;
-    db.UserGoals.findAll({  where: {
-        UserProfileEmail: emailUser,
-        runningfor: {
-            [Op.ne]: emailUser
-          }
-    }})
+    db.UserGoals.findAll({})
     .then(function(dbAll) {
         var allData=[];
         // into the main index, updating the page
@@ -233,7 +231,7 @@ router.get("/myProfile/:key", function(req, res) {
         var hbsObject = {
             runningFor: allData
         };
-        hbsObject.myUser = emailUser;
+        hbsObject.myUser = {'emailMainUser':emailUser};
        res.render('myprofile', hbsObject);
     });
 });
