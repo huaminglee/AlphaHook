@@ -10,7 +10,7 @@ router.get("/", function(req, res) {
     res.setHeader("Content-Type", "text/html")
     console.log("I'm being read")
     // send us to the next get function instead.
-    return res.render("index");
+    return res.render("home");
 });
 
 // get route -> index
